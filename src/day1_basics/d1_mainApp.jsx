@@ -1,4 +1,5 @@
 import BasicComponent from "./01_BasicComponent";
+import PropsExample from "./02_PropsExample";
 
 function D1MainApp() {
   return (
@@ -9,8 +10,13 @@ function D1MainApp() {
       </div>
 
       {/*Section 1: untuk basic component*/}
-      <section>
+      <section className="my-5">
         <BasicComponent />
+      </section>
+
+      {/*section 2: untuk props */}
+      <section className="mx-6">
+        <PropsExample />
       </section>
     </div>
   );
