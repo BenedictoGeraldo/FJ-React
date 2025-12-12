@@ -1,34 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import D1MainApp from "./day1_basics/d1_mainApp";
+// import D2MainApp from "./day2_components/d2_mainApp";
+// import D3MainApp from "./day3_props/d3_mainApp";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      {/* This when i want to show Day 1*/}
+      <D1MainApp />
+
+      {/* This when i want to show Day 2*/}
+      {/* <D2MainApp /> */}
+
+      {/* This when i want to show Day 3*/}
+      {/* <D3MainApp /> */}
+    </div>
   );
 }
 
