@@ -1,5 +1,6 @@
 import BasicComponent from "./01_BasicComponent";
 import PropsExample from "./02_PropsExample";
+import EventHandling from "./03_EventHandling";
 
 function D1MainApp() {
   return (
@@ -17,6 +18,11 @@ function D1MainApp() {
       {/*section 2: untuk props */}
       <section className="mx-6">
         <PropsExample />
+      </section>
+
+      {/*section 3: event handling*/}
+      <section className="my-5 mx-6">
+        <EventHandling />
       </section>
     </div>
   );
