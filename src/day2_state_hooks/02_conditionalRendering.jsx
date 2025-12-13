@@ -69,22 +69,45 @@
   /* Conditional Rendering with Ternary Operator */
 }
 
-import { useState } from "react";
+// import { useState } from "react";
 
-function TernaryExample() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+// function TernaryExample() {
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+//   return (
+//     <div>
+//       <h2>Belajar Conditional Rendering Method ternary Operator</h2>
+
+//       <div>
+//         <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+//           {isLoggedIn ? "Logout" : "Login"}
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default TernaryExample;
+
+import { useState } from "react";
+function LogicalAndExample() {
+  const [showMessage, setShowMessage] = useState(false);
 
   return (
     <div>
-      <h2>Belajar Conditional Rendering Method ternary Operator</h2>
+      <h2>Belajar Conditional Rendering Logical And</h2>
 
       <div>
-        <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
-          {isLoggedIn ? "Logout" : "Login"}
+        <h3>Show/Hide Message</h3>
+        <button onClick={() => setShowMessage(!showMessage)}>
+          {showMessage ? "Hide" : "Show"} Message
         </button>
+
+        {showMessage && (
+          <p>Pesan Ini hanya muncul jika Show Message berstatus true</p>
+        )}
       </div>
     </div>
   );
 }
-
-export default TernaryExample;
+export default LogicalAndExample;

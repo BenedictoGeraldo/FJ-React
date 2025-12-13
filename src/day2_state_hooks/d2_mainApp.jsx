@@ -1,5 +1,5 @@
 import CounterExample from "./01_UseStateExample";
-import IfElseExample from "./02_conditionalRendering";
+import LogicalAndExample from "./02_conditionalRendering";
 
 function D2MainApp() {
   return (
@@ -9,7 +9,7 @@ function D2MainApp() {
       </section> */}
 
       <section>
-        <IfElseExample />
+        <LogicalAndExample />
       </section>
     </div>
   );
