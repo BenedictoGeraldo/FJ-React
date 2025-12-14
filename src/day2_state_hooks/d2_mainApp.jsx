@@ -1,6 +1,7 @@
 import CounterExample from "./01_UseStateExample";
 import LogicalAndExample from "./02_conditionalRendering";
 import SimpleListExample from "./03_ListRendering";
+import StudentListExample from "./03_ListRendering";
 
 function D2MainApp() {
   return (
@@ -13,8 +14,12 @@ function D2MainApp() {
         <LogicalAndExample />
       </section> */}
 
-      <section>
+      {/* <section>
         <SimpleListExample />
+      </section> */}
+
+      <section>
+        <StudentListExample />
       </section>
     </div>
   );
