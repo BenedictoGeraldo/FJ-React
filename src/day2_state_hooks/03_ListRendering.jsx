@@ -24,12 +24,7 @@
 import { useState } from "react";
 
 function StudentListExample() {
-  const [students, setStudents] = useState([
-    { id: 1, name: "Budi", score: 82 },
-    { id: 2, name: "simajorang", score: 20 },
-    { id: 3, name: "dewi lestari", score: 92 },
-    { id: 4, name: "amirul", score: 65 },
-  ]);
+  const [students, setStudents] = useState([]);
 
   const [newName, setNewName] = useState("");
   const [newScore, setNewScore] = useState("");
