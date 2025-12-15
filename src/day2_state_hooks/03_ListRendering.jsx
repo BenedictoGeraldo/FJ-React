@@ -36,7 +36,7 @@ function StudentListExample() {
         name: newName,
         score: Number(newScore),
       };
-      setStudents([...students, newStudent]);
+      setStudents([...students, newStudent]); // ... di sebelah students digunakan untuk mengambil data array sebelumnya. kalau ini dihapus maka hanya name baru yang muncul sedangkan name lama akan menghilang.
       setNewName("");
       setNewScore("");
     }
