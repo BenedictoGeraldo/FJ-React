@@ -37,14 +37,14 @@ function StudentListExample() {
         score: Number(newScore),
       };
       setStudents([...students, newStudent]); // ... di sebelah students digunakan untuk mengambil data array sebelumnya. kalau ini dihapus maka hanya name baru yang muncul sedangkan name lama akan menghilang.
-      setNewName("");
-      setNewScore("");
+      setNewName(""); // bagian ini digunakan untuk reset input form agar dapat diisi kembali dengan data baru
+      setNewScore(""); // bagian ini digunakan untuk reset input form agar dapat diisi kembali dengan data baru=,
     }
   };
 
   const deleteStudent = (id) => {
     setStudents(students.filter((student) => student.id !== id));
-  };
+  }; //fungsi filter disini unntuk membuat array baru tanpa data yang difilter.
 
   const updateScore = (id, newScore) => {
     setStudents(
@@ -69,7 +69,7 @@ function StudentListExample() {
         <input
           type="number"
           value={newScore}
-          onChange={(e) => setNewScore(e.target.value)}
+          onChange={(e) => setNewScore(e.target.value)} // (e) disini merupakan event object yang berfungsi sebagai penampung nilai dari input form
           placeholder="Nilai Siswa"
           min={0}
           max={100}
@@ -79,7 +79,7 @@ function StudentListExample() {
       </div>
 
       {/*Tabel Siswa */}
-      <tabel border="1" cellPadding="10">
+      <table border="1" cellPadding="10">
         <thead>
           <tr>
             <th>ID</th>
@@ -112,7 +112,7 @@ function StudentListExample() {
             </tr>
           ))}
         </tbody>
-      </tabel>
+      </table>
 
       {/*Empty State */}
       {students.length === 0 && <p>Tidak ada data siswa</p>}
