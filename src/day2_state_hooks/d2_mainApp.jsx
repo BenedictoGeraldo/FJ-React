@@ -3,6 +3,7 @@ import LogicalAndExample from "./02_conditionalRendering";
 import SimpleListExample from "./03_ListRendering";
 import StudentListExample from "./03_ListRendering";
 import DocumentTitle from "./04_UseEffectExample";
+import LearntToFetch from "./04_UseEffectExample";
 
 function D2MainApp() {
   return (
@@ -23,8 +24,12 @@ function D2MainApp() {
         <StudentListExample />
       </section> */}
 
-      <section>
+      {/* <section>
         <DocumentTitle />
+      </section> */}
+
+      <section>
+        <LearntToFetch />
       </section>
     </div>
   );
