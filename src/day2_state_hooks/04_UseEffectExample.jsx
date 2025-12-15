@@ -21,9 +21,17 @@ function LearntToFetch() {
 
   return (
     <ul>
-      {users.map((user) => (
-        <li key={user.id}>{user.name}</li>
-      ))}
+      {users.map((user) => {
+        const { id, name, username } = user;
+
+        return (
+          <li key={id}>
+            <p>Your Name is: {name}</p>
+            <p>This is Your Username {username}</p>
+            <br />
+          </li>
+        );
+      })}
     </ul>
   );
 }
