@@ -26,6 +26,7 @@ function LearntToFetch() {
 
         return (
           <li key={id}>
+            <p> User ID: {id}</p>
             <p>Nama yang kamu tarik: {name}</p>
             <p>Ini Adalah username yang kamu tarik {username}</p>
             <p>{address.zipcode}</p>
