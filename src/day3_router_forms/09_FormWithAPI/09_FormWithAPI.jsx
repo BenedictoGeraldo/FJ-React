@@ -6,6 +6,7 @@ function CreateUserForm() {
     email: "",
     username: "",
   });
+
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
