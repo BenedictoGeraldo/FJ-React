@@ -3,6 +3,7 @@ import D2MainApp from "./day2_state_hooks/d2_mainApp";
 import D3MainApp from "./day3_router_forms/d3_mainApp";
 import Basic from "./fetching-api/basic/basic";
 import PostFetching from "./fetching-api/post-fetching/postFetching";
+import PatchFetching from "./fetching-api/patch-fetching/PatchFetching";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
       {/* <D3MainApp /> */}
 
       {/* <Basic /> */}
-      <PostFetching />
+      {/* <PostFetching /> */}
+
+      <PatchFetching />
     </div>
   );
 }
