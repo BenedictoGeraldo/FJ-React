@@ -4,6 +4,7 @@ import D3MainApp from "./day3_router_forms/d3_mainApp";
 import Basic from "./fetching-api/basic/basic";
 import PostFetching from "./fetching-api/post-fetching/postFetching";
 import PatchFetching from "./fetching-api/patch-fetching/PatchFetching";
+import DeleteFetching from "./fetching-api/delete-fetching/DeleteFetching";
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
       {/* <Basic /> */}
       {/* <PostFetching /> */}
 
-      <PatchFetching />
+      {/* <PatchFetching /> */}
+
+      <DeleteFetching />
     </div>
   );
 }
