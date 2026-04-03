@@ -2,6 +2,7 @@ import D1MainApp from "./day1_basics/d1_mainApp";
 import D2MainApp from "./day2_state_hooks/d2_mainApp";
 import D3MainApp from "./day3_router_forms/d3_mainApp";
 import Basic from "./fetching-api/basic/basic";
+import PostFetching from "./fetching-api/post-fetching/postFetching";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* This when i want to show Day 3*/}
       {/* <D3MainApp /> */}
 
-      <Basic />
+      {/* <Basic /> */}
+      <PostFetching />
     </div>
   );
 }
