@@ -10,7 +10,7 @@ export default function PostFetching() {
   const [body, setBody] = useState("");
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("https://jsonplaceholder.typicode.com/posts?_limit=15")
       .then((res) => {
         if (!res.ok) throw new Error("Terjadi kesalahan saat mengambil data");
         return res.json();
