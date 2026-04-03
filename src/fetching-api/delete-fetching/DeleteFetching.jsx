@@ -4,6 +4,7 @@ export default function DeleteFetching() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isDeleting, setIsdeleting] = useState(null);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
@@ -17,6 +18,7 @@ export default function DeleteFetching() {
   }, []);
 
   const handleDelete = (id) => {
+    setIsdeleting(id);
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
       method: "DELETE",
       headers: {
@@ -26,7 +28,8 @@ export default function DeleteFetching() {
       .then(() => {
         setPosts((prev) => prev.filter((post) => post.id !== id));
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => setIsdeleting(null));
   };
 
   return (
@@ -42,7 +45,12 @@ export default function DeleteFetching() {
           <h3>{post.title}</h3>
           <h3>{post.body}</h3>
 
-          <button onClick={() => handleDelete(post.id)}>Delete</button>
+          <button
+            onClick={() => handleDelete(post.id)}
+            disabled={isDeleting === post.id}
+          >
+            {isDeleting === post.id ? "Deleting..." : "Delete"}
+          </button>
           <hr />
         </div>
       ))}
